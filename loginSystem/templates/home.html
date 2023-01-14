@@ -1,0 +1,110 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO Tags -->
+        <meta name="author" content="Mehdi Hyad">
+        <meta name="keywords" content="speed type, test yping , typing">
+        <meta name="description" content="RushType Website to test your typing speed, and improving it">
+        <title>masterType.com - SpeedTyping Test Online</title>    
+        <link rel="shortcut icon" href="{% static 'media/icon.png' %}"/>
+        
+        <!--  -->
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+    </head>
+    <body>
+        {% include 'navigation.html' %}
+
+        <section class="hero">
+            <div class="container">
+                <div class="left-hero">
+                    <h1 id="heading"></h1>
+                    <p>masterType.com is a platform for testing and imporving your typing speed skills</p>
+                    <a href="{% url 'registerPage' %}"><button id="pri-cta">Get Started</button></a>
+                </div>
+                <!-- KeyBoard Section -->
+                <div class="keyboard">
+                    <ul class="row row-2">
+                        <li class="pinky" id="A">A</li>
+                        <li class="ring" id="M">Z</li>
+                        <li class="middle" id="D">E</li>
+                        <li class="pointer2nd" id="G">R</li>
+                        <li class="pointer2nd" id="H">H</li>
+                        <li class="pointer1st" id="J">J</li>
+                        <li class="pointer1st" id="J">K</li>
+                        <li class="middle" id="K">S</li>
+                        <li class="ring" id="L">L</li>
+                        <li class="pointer2nd" id="G">N</li>
+                        <li class="pointer2nd" id="H">O</li>
+                        <li class="pointer1st" id="J">J</li>
+                        
+                    </ul>
+                    <ul class="row row-1" style="display:flex;justify-content:center;">
+                        <li class="pinky" id="Q">Q</li>
+                        <li class="ring" id="W">W</li>
+                        <li class="middle" id="E">E</li>
+                        <li class="pointer2nd" id="T">T</li>
+                        <li class="pointer2nd" id="Y">Y</li>
+                        <li class="pointer1st" id="U">U</li>
+                        <li class="pointer1st" id="R">R</li>
+                        <li class="middle" id="I">I</li>
+                        <li class="ring" id="O">O</li>
+                        <li class="pointer1st" id="F">F</li>
+                        <li class="pointer2nd" id="G">G</li>
+                        <li class="pointer2nd" id="H">H</li>
+                    </ul>
+                    <ul class="row row-1" style="display:flex;justify-content:center;">
+                        <li class="pinky" id="Q">Q</li>
+                        <li class="ring" id="W">W</li>
+                        <li class="middle" id="E">E</li>
+                        <li class="pointer2nd" id="T">T</li>
+                        <li class="pointer2nd" id="Y">Y</li>
+                        <li class="pointer1st" id="U">U</li>
+                        <li class="middle" id="I">I</li>
+                        <li class="pointer1st" id="R">R</li>
+                        <li class="ring" id="O">O</li>
+                        <li class="pointer2nd" id="G">G</li>
+                        <li class="pointer2nd" id="H">H</li>
+                        <li class="pointer1st" id="J">J</li>
+                    </ul>
+                    <ul class="row row-1" style="display:flex;justify-content:center;">
+                        <li class="pointer1st" id="R">R</li>
+                        <li class="pointer2nd" id="T">T</li>
+                        <li class="pointer2nd" id="Y">Y</li>
+                        <li class="pointer1st" id="U">U</li>
+                        <li class="middle" id="I">I</li>
+                        <li class="ring" id="O">O</li>
+                        <li class="pointer2nd" id="G">G</li>
+                        <li class="pointer2nd" id="H">H</li>
+                        <li class="pointer1st" id="J">J</li>
+                    </ul>
+                    <ul class="row row-1" style="display:flex;justify-content:center;">
+                        <li class="pointer1st" id="R">R</li>
+                        <li class="pointer2nd" id="T">T</li>
+                        <li class="pointer2nd" id="Y">Y</li>
+                        <li class="pointer1st" id="U">U</li>
+                        <li class="middle" id="I">I</li>
+                        <li class="ring" id="O">O</li>
+                        <li class="pointer2nd" id="G">G</li>
+                        <li class="pointer2nd" id="H">H</li>
+                        <li class="pointer1st" id="J">J</li>
+                    </ul>
+                </div>
+                <!--  -->
+            </div>
+        </section>
+        <!-- ------------ Fotter ------------ -->
+        {% include "fotter.html" %}
+        
+        
+
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>

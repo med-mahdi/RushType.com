@@ -1,0 +1,151 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
+        <!-- SEO Tags -->
+        <meta name="author" content="Mehdi Hyad">
+        <meta name="keywords" content="speed type, test yping , typing">
+        <meta name="description" content="RushType Website to test your typing speed, and improving it">
+        <title>masterType.com - SpeedTyping Test Online</title>    
+        <link rel="shortcut icon" href="{% static 'media/icon.png' %}"/>
+        <!--  -->        
+    </head>
+    <body>
+        {% include 'navigation.html'%}
+
+
+        <!-- <div class="circle-light"></div> -->
+        <section class="card-section">
+            {% for msg in messages %}
+                <p id="{{msg.tags}}" class="message">{{msg}}</p>
+            {% endfor %}
+            <p id="msg-processing" class="message">Processing Your Info, Please Wait</p>
+
+            <div class="card">
+                <div class="card-container">
+                    <div class="card-head">
+                        <h1>Register Now</h1>
+                        <span id="help">Enter your email and password to Login</span>
+                    </div>
+                    <form action="" id="form-post" method="POST">
+                        {% csrf_token %}
+                        <label for="username">
+                            <div class="input-box">
+                                {{form.username}}
+                            </div>
+                        </label>
+                        <label for="userpassword">
+                            <div class="input-box">
+                                {{form.password1}}
+                            </div>
+                        </label>
+                        <label for="userpassword">
+                            <div class="input-box">
+                                {{form.password2}}
+                            </div>
+                        </label>
+                        <!-- For Geolocation DATA -->
+                        <label for="userdata">
+                            <input type="hidden" name="latitude" id="latitude">
+                            <input type="hidden" name="longitude" id="longitude">
+                        </label>
+                        <input type="submit" value="Sign Up" id="submit-btn">
+                        <span class="rmd-rgt">Already Have an account<a href="{% url 'loginPage' %}" id="rmd-tgt">Login Now</a></span>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Keyboard Section -->
+        <div class="keyboard">
+                <ul class="row row-0">
+                    <li class="pinky" id="esc">ESC</li>
+                    <li class="pinky" id="1">1</li>
+                    <li class="ring" id="2">2</li>
+                    <li class="middle" id="3">3</li>
+                    <li class="pointer1st" id="4">4</li>
+                    <li class="pointer2nd" id="5">5</li>
+                    <li class="pointer2nd" id="6">6</li>
+                    <li class="pointer1st" id="7">7</li>
+                    <li class="middle" id="8">8</li>
+                    <li class="ring" id="9">9</li>
+                    <li class="pinky" id="10">0</li>
+                    <li class="pinky" >-</li>
+                    <li class="pinky" >+</li>
+                    <li class="pinky" id="back">BACK</li>
+                </ul>
+                <ul class="row row-1">
+                    <li class="pinky" id="tab">TAB</li>
+                    <li class="pinky" id="Q">Q</li>
+                    <li class="ring" id="W">W</li>
+                    <li class="middle" id="E">E</li>
+                    <li class="pointer1st" id="R">R</li>
+                    <li class="pointer2nd" id="T">T</li>
+                    <li class="pointer2nd" id="Y">Y</li>
+                    <li class="pointer1st" id="U">U</li>
+                    <li class="middle" id="I">I</li>
+                    <li class="ring" id="O">O</li>
+                    <li class="pinky" id="P">P</li>
+                    <li class="pinky" >[</li>
+                    <li class="pinky" >]</li>
+                    <li class="pinky" >\</li>
+                </ul>
+                <ul class="row row-2">
+                    <li class="pinky" id="caps">CAPS</li>
+                    <li class="pinky" id="A">A</li>
+                    <li class="ring" id="M">M</li>
+                    <li class="middle" id="D">D</li>
+                    <li class="pointer1st" id="F">F</li>
+                    <li class="pointer2nd" id="G">G</li>
+                    <li class="pointer2nd" id="H">H</li>
+                    <li class="pointer1st" id="J">J</li>
+                    <li class="middle" id="K">K</li>
+                    <li class="ring" id="L">L</li>
+                    <li class="pinky" >S</li>
+                    <li class="pinky" >''</li>
+                    <li class="pinky" id="enter">ENTER</li>
+                </ul>
+                <ul class="row row-3" style="display:flex;justify-content:center;">
+                    <!-- <li class="pinky" id="left-shift">SHIFT</li> -->
+                    <li class="ring" id="X">X</li>
+                    <li class="middle" id="C">C</li>
+                    <li class="pointer1st" id="V">V</li>
+                    <li class="pointer2nd" id="B">B</li>
+                    <li class="pointer2nd" id="N">N</li>
+                    <li class="pointer1st" id="M">M</li>
+                    <li class="middle" >,</li>
+                    <li class="ring" >.</li>
+                    <li class="pinky" >;</li>
+                    <li class="pinky" id="right-shift">SHIFT</li>
+                </ul>
+                <ul class="row row-1" style="display:flex;justify-content:center;">
+                    <li class="pinky" id="Q">Q</li>
+                    <li class="ring" id="W">W</li>
+                    <li class="middle" id="E">E</li>
+                    <li class="pointer1st" id="R">R</li>
+                    <li class="pointer2nd" id="T">T</li>
+                    <li class="pointer2nd" id="Y">Y</li>
+                    <li class="pointer1st" id="U">U</li>
+                    <li class="middle" id="I">I</li>
+                    <li class="ring" id="O">O</li>
+                    <li class="pinky" id="P">P</li>
+                </ul>
+                <ul class="row row-4">
+                    <li id="space-btn"> </li>
+                </ul>
+            </div>
+        </div>
+        
+        {% include 'fotter.html'%}
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="{% static 'js/register.js' %}"></script>
+    </body>
+</html>

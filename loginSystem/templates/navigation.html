@@ -1,0 +1,85 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/navigation.css' %}">
+        <!-- SEO Tags -->
+        <meta name="author" content="Mehdi Hyad">
+        <meta name="keywords" content="speed type, test yping , typing">
+        <meta name="description" content="RushType Website to test your typing speed, and improving it">
+        <title>masterType.com - SpeedTyping Test Online</title>    
+        <link rel="shortcut icon" href="{% static 'media/icon.png' %}"/>
+        
+        <!--  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        
+        <header>
+            <div class="nav">
+                <input type="checkbox" id="nav-check">
+                
+                <div class="nav-header">
+                  <div class="nav-title">
+                    {% if request.user.is_authenticated %}
+                       <a href="{% url 'testPage' %}"><img id="logo" src="{% static 'media/logo (4).png' %}" alt=""></a>
+                    {% else %}
+                        <a href="{% url 'heroPage' %}"><img id="logo" src="{% static 'media/logo (4).png' %}" alt=""></a>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <div class="nav-btn">
+                  <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+
+                {% if request.user.is_authenticated %}
+                    <div id="nav-links-dashboard" class="nav-links">
+                        {% if request.user.is_staff %}
+                            <a href="/admin/">Admin</a>
+                        {% endif %}
+                        <a href="{% url 'testPage' %}">Typing</a>
+                        <a href="{% url 'ranking' %}">Ranking</a>
+                        <a href="{% url 'aboutPage' %}">About</a>
+                        <a href="{% url 'logoutPage' %}">Logout</a>
+                        <span id="profile-container">
+                            <a href="{% url 'profilePage' %}">
+                                <span id="prf-img">
+                                    {% if user.profile.profile_img %}
+                                        <img src="{{user.profile.profile_img}}" alt="profile image">
+                                    {% else %}
+                                        <img src="{{user.profile_img}}" alt="profile image">
+                                    {% endif %}
+                                </span>
+                                <a href="{% url 'profilePage' %}" id="userName">{{user}}</a>
+                            </a>
+                        </span>
+                    </div>
+                {% else %}
+                    <div class="nav-links">
+                        <a href="{% url 'testPage' %}">Typing</a>
+                        <!-- <a href="{% url 'heroPage' %}">Home</a> -->
+                        <a href="{% url 'ranking' %}">Ranking</a>
+                        <a href="{% url 'aboutPage' %}">About</a>
+                        <a href="{% url 'loginPage' %}">Login</a>
+                        <a id="nav-cta" href="{% url 'registerPage' %}">Register</a>
+                    </div>
+                {% endif %}
+                
+                
+            </div>
+        </header>
+
+        
+
+
+    </body>
+</html>
