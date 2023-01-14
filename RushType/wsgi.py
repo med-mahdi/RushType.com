@@ -10,7 +10,11 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
+from whitenoise import WhiteNoise
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'RushType.settings')
 
 application = get_wsgi_application()
+# 
+application = WhiteNoise(application, root='path/to/static/files')
+application.add_files('path/to/static/files', prefix='more-static/')
