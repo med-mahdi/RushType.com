@@ -1,0 +1,698 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0px;
+    font-family: 'segoe ui';
+    background-color: #1a1a1b;
+}
+
+header{
+    padding: 1em 0;
+    background-color: #1a1a1b;
+}
+
+
+#logo{
+    width: 150px;
+}
+
+
+.nav {
+    height: 50px;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    /*  */
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+#nav-cta{
+    color: black;
+    background-color: #ffc000;
+    padding: .7em 2em;
+    border-radius:3px;
+    margin-left: 0.5em;
+}
+
+
+  
+.nav > .nav-header {
+    display: inline;
+  }
+  
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+    /*  */
+  }
+  
+.nav > .nav-btn {
+    display: none;
+  }
+  
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+    z-index: 1000;
+  }
+  
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+    margin: 0 1.5em;
+  }
+  
+
+  
+.nav > #nav-check {
+    display: none;
+  }
+@media (max-width:840px) {
+    #nav-cta{
+        color: #efefef;
+        background-color: transparent;
+        padding: 0em;
+        margin-top: .5em;
+    }
+
+
+
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+      margin-bottom: .5em;
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items: center;
+      overflow-x:hidden;
+    }
+
+    .nav{
+        width: 100%;
+    }
+
+    .nav > .nav-links > a {
+      display: inline;
+      width: 100%;
+      text-align:center;
+      margin: 0;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+
+    .nav > .nav-header > .nav-title {
+        margin-left: 1em;
+    }
+
+    .nav > .nav-btn{
+        margin-right: 1em;
+    }
+}
+
+
+
+/* -------------------------------- Card Section ------------------------ */
+
+
+
+.card{
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    height: 650px;
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    top: 105px;
+    /* Display */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #1b1e2596;
+}
+
+
+.conatiner{
+    /* border: 1px solid gray; */
+    width: 91%;
+    height: 75%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+.row-data{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.field-data{
+    width: 170px;
+    height: 120px;
+    position: relative;
+}
+
+
+
+.field-data h2{
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 18px;
+    /* identical to box height, or 90% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.7px;
+
+    color: #ADADAD;
+}
+
+
+
+.field-data h1{
+    font-family: roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 18px;
+    /* identical to box height, or 36% */
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.7px;
+    /* border: 1px solid red; */
+    margin-top: .5em;
+    color: #FFFFFF;
+}
+
+
+
+
+/*  */
+
+
+.dt-created{
+    font-family: roboto;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: rgba(226, 164, 20, 0.527);
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.14);
+    position: relative;
+    top: 10px;
+}
+
+/*  */
+
+
+/* -------------- LAST Section Data ----------------- */
+
+
+.table  {
+  border-collapse: collapse;
+  width: 45%;
+  height: 275px;
+  table-layout: fixed;
+  overflow-y:scroll;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height:5px;
+  background-color: #c4c4c43f;
+} 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #c4c4c43f;
+  border-radius:5px
+} 
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px #df8b0d; 
+  border-radius:5px;
+  height: 10px;
+}
+
+
+table{
+  width: 100%;
+  height: 250px;
+}
+
+
+table caption {
+  font-size: 1.2em;
+  color: rgb(200, 200, 200);
+  text-align: left;
+  margin-left: .5em;
+  margin-bottom: .7em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+}
+
+table th{
+  height: 45px;
+}
+table td {
+  text-align: center;
+  height: 45px;
+}
+
+
+table tr:nth-child(odd){
+  background:rgba(13, 17, 27, 0.42);
+  color: rgb(180, 180, 180);
+}
+
+table tr:nth-child(even){
+  background: rgba(109, 109, 112, 0.452);
+  color: rgb(180, 180, 180);
+}
+
+
+
+table th{
+  background-color:rgba(13, 17, 27, 0.42);
+  color: #7C7C7C;
+}
+
+
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+
+.dt-tab{
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content:space-between;
+  position: relative;
+  top: 15px;
+}
+
+
+
+.chart{
+  /* border: 1px solid green; */
+  width: 50%;
+  height: 275px;
+}
+
+
+.span-rcd{
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+
+
+.field-data:last-child{
+  position: relative;
+  right: 20px;
+}
+
+
+
+/* ------------- medi Queries ------------------ */
+
+
+
+
+@media (max-width:1200px) {
+  .card{
+    height: 660px;
+    width: 1000px;
+    
+  }
+
+
+  .card .conatiner{
+    /* border: 1px solid white; */
+    width: 85%;
+  }
+
+  .dt-tab{
+    /* border: 1px solid white; */
+    position: relative;
+    top: 20px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width:1000px) {
+  .field-data:last-child{
+    position: relative;
+  }
+  
+
+
+  .card{
+    /* border:1px solid red; */
+    height: 990px;
+    width: 800px;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 85%;
+    justify-content:flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .row-data{
+    /* border: 1px solid white; */
+    margin-bottom: 2.5em;
+    justify-content:space-between;
+  }
+
+  .field-data{
+    /* border: 1px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table  {
+    width: 100%;
+  }
+
+  .field-data h2{
+    font-size: 16px;
+    color: #ADADAD;
+  }
+  .field-data h1{
+      font-size: 50px;
+  }
+
+
+  .dt-created{
+    margin-bottom: 2em;
+  }
+
+
+  table {
+    width: 100%;
+  }
+
+
+  .dt-tab{
+    flex-direction:column;
+    align-items: center;
+    height: 600px;
+  }
+  
+  
+  .chart{
+    height: 400px;
+    width: 100%;
+    margin-top: 1em;
+    /* border: 1px solid white; */
+    margin-top: 2em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:800px) {
+  .field-data:last-child{
+    position: relative;
+    right: 10px;
+  }
+
+
+  .card{
+    height: 990px;
+    width: 700px;
+    margin-bottom: 10em;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 85%;
+    justify-content:flex-start;
+    /* border: 1px solid red; */
+  }
+}
+
+
+
+
+
+@media (max-width:600px) {
+  .field-data:last-child{
+    position: relative;
+    right: 0px;
+  }
+
+
+  .card{
+    /* border:1px solid red; */
+    height: 870px;
+    width: 450px;
+    margin-bottom: 10em;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 85%;
+    justify-content:flex-start;
+    /* border: 1px solid red; */
+  }
+
+  /* Changement  */
+
+
+  .span-rcd{
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 90%;
+    justify-content:flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .row-data{
+    /* border: 1px solid white; */
+    margin-bottom: 2.5em;
+    justify-content:space-between;
+    /* flex-direction: column; */
+  }
+
+  .field-data{
+    /* border: 1px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .field-data h2{
+    font-size: 14px;
+    color: #ADADAD;
+  }
+  .field-data h1{
+      font-size: 30px;
+      position: relative;
+      right:7px;
+    }
+
+
+  canvas{
+    height: 700px;
+    width: 100%;
+    margin-top: 1em;
+    /* border: 1px solid white; */
+    margin-top: 2em;
+  }
+
+
+  
+  .dt-created{
+    font-size: 14px;
+    width: 70%;
+    /* border: 1px solid red; */
+    margin:0 auto;
+    top: -10px;
+}
+
+
+}
+
+
+
+
+@media (max-width:450px) {
+  .field-data:last-child{
+    position: relative;
+    right: 0px;
+  }
+
+
+  .card{
+    height: 870px;
+    width: 390px;
+    margin-bottom: 10em;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 85%;
+    justify-content:flex-start;
+  }
+
+  /* Changement  */
+
+
+  .span-rcd{
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+  }
+
+  .card .conatiner{
+    width: 85%;
+    height: 90%;
+    justify-content:flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .row-data{
+    /* border: 1px solid white; */
+    margin-bottom: 2.5em;
+    justify-content:space-between;
+    /* flex-direction: column; */
+  }
+
+  .field-data{
+    /* border: 1px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .field-data h2{
+    font-size: 14px;
+    color: #ADADAD;
+  }
+  .field-data h1{
+      font-size: 30px;
+      position: relative;
+      right:7px;
+    }
+
+
+  canvas{
+    height: 700px;
+    width: 100%;
+    margin-top: 1em;
+    /* border: 1px solid white; */
+    margin-top: 2em;
+  }
+
+
+  
+  .dt-created{
+    font-size: 14px;
+    width: 70%;
+    /* border: 1px solid red; */
+    margin:0 auto;
+    top: -10px;
+  }
+}
+
+
+
+@media (max-width:391px) {
+  .field-data:last-child{
+    position: relative;
+    right: 0px;
+    border: 1px solid red;
+  }
+
+
+  .card{
+    height: 780px;
+    width: 360px;
+    margin-bottom: 10em;
+  }
+
+  .field-data h1{
+    font-size: 25px;
+    position: relative;
+    right:12px;
+  }
+
+}

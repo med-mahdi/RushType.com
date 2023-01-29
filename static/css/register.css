@@ -1,0 +1,436 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+
+:root{
+    --primary-color : #e2b714;
+    --second-color : #e2b51467;
+    --background-color : #1a1a1b;
+    
+    --buttons-bgcolor : #3d3d3dea;
+    --buttons-color : #e2a414b7;
+    --buttons-font : 18px;
+}
+
+
+
+body{
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+
+/* --------------------- Main Section ---------------------- */
+
+.message{
+  border-radius: 5px;
+  width: 410px;
+  margin: 0 auto;
+  padding:1.8em 0;
+  color: var(--background-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  background-color: rgba(7, 207, 84, 0.692);
+}
+
+#msg-processing{
+  border-radius: 5px;
+  width: 410px;
+  margin: 0 auto;
+  padding:1.8em 0;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 1em;
+  background-color: rgba(32, 209, 100, 0.692);
+  display: none;
+}
+
+
+
+#error{
+  background-color: #CA4754;
+  color: white;
+  font-family: Nexa;
+  font-style: normal;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+form{
+  position: relative;
+    top: 5px;
+}
+
+
+.card-section{
+    z-index: 10;
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid white; */
+    /* Display */
+    position: absolute;
+    top: 240px;
+}
+
+.circle-light{
+    width: 379.51px;
+    height: 379.51px;
+    border-radius: 50%;
+    background: rgba(250, 248, 248, 0.274);
+    filter: blur(200px);
+    transform: rotate(-4.15deg);
+    /* Position Light */
+    position:absolute;
+    right: 340px;
+    top: 150px;
+    z-index: 0;
+}
+
+
+.card{
+    width: 410px;
+    /* height: 420px; */
+    height: 470px;
+    border: 1px solid #DDDDDD;
+    border-radius:5px;
+    background: linear-gradient(214.79deg, #626262 -15.37%, rgba(98, 98, 98, 0) 119.4%);
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    /* Display */
+    display: flex;
+    justify-content:center;
+    align-items: center;    
+}
+
+
+
+.card-container{
+    width: 315px;
+    height: 350px;
+    /* border: 1px solid white; */
+    /* Display */
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+
+
+
+
+
+
+.card-head{
+    /* border: 1px solid red; */
+    color:white;
+    text-align: center;
+}
+
+
+.card-head h1{
+    font-family: Nexa;
+    font-style: normal;
+    font-weight: 650;
+    font-size: 30px;
+    line-height: 130%;
+    /* identical to box height, or 35px */
+    text-align: center;
+    color: #FAF7EF;
+    margin-bottom: .2em;
+}
+
+
+.card-head span{
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #CBCBCB;
+}
+
+
+
+.input-box input{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(241, 241, 241);
+    font-size: 15px;
+    position: relative;
+    width: 90%;
+    left: 15px;
+}
+
+::placeholder{
+    color: rgb(0, 0, 0);
+    font-size: 14.5px;
+}
+
+
+
+.input-box{
+    width: 100%;
+    border: 1px solid white;
+    background-color: #747474;
+    padding:1em 0;
+    border-radius: 3px;
+    margin:.8em 0;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+
+
+#submit-btn{
+    width: 100%;
+    padding:1em 0;
+    border-radius: 3px;
+    font-size: 15px;
+    background: var(--primary-color);
+    color: #1d1e1f;
+    border: none;
+    border-radius: 3px;
+    /* Font Stuff */
+    font-family: Arial;
+    font-style: normal;
+    font-weight: 650;
+    font-size: 15px;
+    line-height: 140%;
+    letter-spacing: 0.035em;
+}
+
+
+
+.rmd-rgt{
+  display: block;
+  text-align: center;
+  /*  */
+  position: relative;
+  top: 24px;
+  font-size: 12.5px;
+  color: #b9b9b9;
+}
+
+
+
+.rmd-rgt a{
+  margin-left: .8em;
+  font-size: 13px;
+  color: #e2b714;
+}
+
+
+
+/* ----------------------- Key Board Section ------------------------------ */
+
+
+
+.keyboard {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 0 auto;
+    margin-top:90px;
+    /*  */
+    position: relative;
+    top: 230px;
+    left: 860px;
+    transform:rotate(10deg);
+
+    /* border: 1px solid white; */
+  }
+  
+  .row {
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    height: 3.5em;
+    width: 3.5em;
+    color: rgba(0,0,0,0.7);
+    border-radius: 0.4em;
+    line-height: 3em;
+    letter-spacing: 1px;
+    margin: 0.4em;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1em;
+    /* Display */
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    /*  */
+    box-shadow: 0px 6px 33px rgba(0, 0, 0, 0.11);
+  }
+  
+  #tab {
+    width: 5em;
+  }
+  
+  #caps {
+    width: 6em;
+  }
+  
+  #left-shift {
+    width: 8em;
+  }
+  
+  #enter {
+    width: 6em;
+  }
+  
+  #right-shift {
+    width: 8em;
+  }
+  
+  #back {
+    width: 5em;
+  }
+  
+  .pinky { 
+    background-color: var(--buttons-bgcolor);
+    color: var(--buttons-color);
+    font-size: var(--buttons-font);
+  }
+  .pinky.selected {
+    color: crimson;
+  }
+  
+  .ring { 
+    background-color: var(--buttons-bgcolor);
+    color: var(--buttons-color);
+    font-size: var(--buttons-font);
+  }
+  .ring.selected {
+    color: coral;
+  }
+  
+  .middle { 
+    background-color: var(--buttons-bgcolor);
+    color: var(--buttons-color);
+    font-size: var(--buttons-font);
+  }
+  .middle.selected {
+    color: darkorange;
+  }
+  
+  .pointer1st { 
+    background-color: var(--buttons-bgcolor);
+    color: var(--buttons-color);
+    font-size: var(--buttons-font);
+  }
+  .pointer1st.selected {
+    color: e2b51467;
+  }
+  
+  .pointer2nd { 
+    background-color: var(--buttons-bgcolor);
+    color: var(--buttons-color);
+    font-size: var(--buttons-font);
+  }
+  .pointer2nd.selected {
+    color: khaki;
+  }
+  
+
+
+
+#space-btn{
+  margin: 0 auto;
+  width: 760px;
+  padding:2em 0;
+  background-color: var(--buttons-bgcolor);
+  color: #e2b51467;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------- End KeyBoard Of KeyBoard Section ------------------------------- */
+
+
+
+@media (max-width:450px){
+  .rmd-rgt{
+    top:0px;
+  }
+
+  .message{
+    width: 337px;
+  }
+
+
+  ::placeholder{
+    font-size: 16px;
+  }
+
+  .keyboard{
+    display: none;
+  }
+
+
+  .card{
+    width: 337px;
+    height:420px;
+  } 
+
+  .card-head{
+    position: relative;
+    top: 13px;
+  }
+
+  .card-head h1{
+    font-size: 24px;
+  }
+
+  .card-head #help{
+    font-size: 12px;
+  }
+
+
+  form{
+    display:flex;
+    flex-direction: column;
+    
+  }
+
+  #submit-btn{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 8px;
+  }
+
+  .input-box{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8px;
+    padding: .9em 0;
+  }
+}
+
+
+
+/* --------------------------- Last Edited -------------------- */
+

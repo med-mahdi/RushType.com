@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Mulish:ital,wght@0,200;0,400;0,600;0,700;1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #1B1C1D;
+}
+
+
+
+.aboutMe{
+    /* border: 1px solid white; */
+    position: relative;
+    top: 200px;
+    margin-bottom: 20em;
+}
+
+.aboutMe .container{
+    /* border: 2px solid purple; */
+    max-width: 1400px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.aboutMe .container > p{
+    /* border: 1px solid red; */
+    max-width: 820px;
+    width: 80%;
+    margin: 0 auto;
+
+    font-family:roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 147% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    color: #909090;
+}
+/*  */
+.paragraphs{
+    /* border: 3px solid red; */
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 80%;
+}
+
+.aboutMe .container .about-para {
+    margin-bottom: 3em;
+}
+
+
+.aboutMe .container .about-para h3{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 25px;
+    color: #D8D8D8;
+}
+
+
+
+.aboutMe .container .about-para p{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    color: #CFCFCF;
+}
+
+/*  */
+
+.contact-frm{
+    /* border: 2px solid red; */
+    max-width: 700px;
+    min-width: 280px;
+    margin: 0 auto;
+    margin-top: 15em;
+}
+
+.contact-frm h2{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 48px;
+    /* identical to box height, or 156% */
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #D8D8D8;
+}
+
+.contact-frm p{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #CFCFCF;
+}
+
+.contact-frm label{
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: #CFCFCF;
+}
+
+
+
+.contact-frm input{
+    padding: .5em 0;
+}
+
+.contact-frm input::placeholder{
+    position: relative;
+    left: 30px;
+}
+
+
+.contact-frm button{
+    background-color:#C98D06;
+    width: 100%;
+    padding: .7em 0;
+    border: none;
+}
+
+
+.contact-frm button:hover{
+    background-color:#C98D06;
+    width: 100%;
+    padding: .7em 0;
+    border: none;
+}
+
+
+.contact-frm button:active{
+    background-color:#C98D06;
+    width: 100%;
+    padding: .7em 0;
+    border: none;
+}
+
+
+
+p.msg-not{
+    padding: 1.5em;
+    border-radius: 3px;
+    background: linear-gradient(268.39deg, #1FD9D9 -109.78%, rgba(30, 179, 63, 0.79) 202.86%);
+    color:white;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.103);
+    display: none;
+}
+
